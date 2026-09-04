@@ -29,10 +29,10 @@ app = FastAPI(
     version="1.0.0",
 )
 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[o.strip() for o in settings.cors_allow_origins.split(",")],
-    allow_credentials=True,
+    allow_origins=["https://frontend-4wzk25sro-suresh-developer-code.vercel.app", "http://localhost:3000"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
